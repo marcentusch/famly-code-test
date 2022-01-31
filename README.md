@@ -14,10 +14,16 @@ This challenge forms the basis for a conversation about how you approach develop
 - You can change as much as you want, we will go through the choices together.
 - If you get stuck, or you think there’s something that doesn’t make sense, please don’t hesitate to reach out!
 
-
 **If you want to detail anything about your solution, include it here:**
+
 <!-- START of your notes on the solution -->
 
+I skipped Part 1 because I have not worked with SQL in a long time. So I focused on part 2 instead.
+
+Part 2:
+I decided to create a list of children on the nursery and just figure out who is checked in or out based on `checkInTime` and `checkOutTime` on `Child` type. If child has no check in time, they are not checked in. If they do not have a check out time, then they are not checked out.
+
+Generally I tried to have most of the logic in simple pure functions so that it could easily be tested.
 
 <!-- END of Notes -->
 
@@ -40,9 +46,9 @@ Given the tables specified in `db/migrations.sql`, write the following SQL queri
 
 1. All messages in any `conversation` sent by the user with user ID `4`
 2. All messages in `conversation` where users 1 and 3 are participating (other users
-could also be participating)
+   could also be participating)
 3. All messages in any `conversation` where the message contents include the word
-"cake"
+   "cake"
 
 You can put these 3 queries into the `db/` folder.
 
@@ -69,14 +75,12 @@ We want you to implement this functionality:
 4. Getting a list of children that was checked in for at least 2 hours today.
 5. Write at least one test for your solution
 
-
 To help limit the scope of this:
 
 - You do not need to worry about timezones, just imagine that everything will always be UTC.
 - You decide how you model the state - you can do it as a simple in-memory list or pretend you have a SQL database or other data store available.
 - You do not need to worry about UI or server/routing, only the business logic. This could be as simple as three functions and a global mutable list of checked in children.
 - For testing, you can use a test framework you know or just a simple function that calls your code and returns a boolean if the actual result match the expected result.
-
 
 ## Database
 
@@ -94,6 +98,7 @@ $ docker run \
 ```
 
 You can then connect to it on:
+
 - **Hostname**: `127.0.0.1`
 - **Port**: `3306`
 - **Username**: `root`
