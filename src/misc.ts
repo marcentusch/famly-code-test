@@ -46,8 +46,7 @@ export const getTwoHourChildren = (children: Child[]): Child[] => {
       end: child.checkOutTime as Date,
     });
 
-    const checkedInFor2Hours = checkedInDuration.hours ?? 0 > 2;
-    return checkedInFor2Hours;
+    return checkedInDuration.hours ?? 0 > 2;
   });
 };
 

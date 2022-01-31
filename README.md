@@ -23,6 +23,8 @@ I skipped Part 1 because I have not worked with SQL in a long time. So I focused
 Part 2:
 I decided to create a list of children on the nursery and just figure out who is checked in or out based on `checkInTime` and `checkOutTime` on `Child` type. If child has no check in time, they are not checked in. If they do not have a check out time, then they are not checked out.
 
+For calculating how long the child was checked in I just used the 2 timestamps on `Child` to get a duration.
+
 Generally I tried to have most of the logic in simple pure functions so that it could easily be tested.
 
 <!-- END of Notes -->
